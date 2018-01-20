@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body{
+			height: 600px;
+			background: url(pic.jpg) no-repeat 810px 350px;
+		}
+			#person{
+				width: 1200px;
+				height: 280px;
+				font-size: 30px;
+				cursor: pointer;
+				word-wrap:break-word;
+				margin: 5px auto 1px;
+				border: 1px dashed blueviolet;
+			}
+			#p-click{
+				width: 362px;
+				margin: 0 auto;
+				text-align: center;
+				color: black;
+				font-size: 30px;
+				/*cursor: pointer;*/
+				word-wrap:break-word;
+				color: palevioletred;
+			}
+			div{
+				margin-left: 50px ;
+			}
+			.s{
+				font-size: 18px ;
+				color: brown;
+				font-weight: 800;
+				display: inline-block;
+				padding-right: 15px;
+			}
+			.b2{
+			  width: 70px;
+			  position: absolute;
+			  right: 77px;
+			  cursor: pointer;
+			  
+			}
+			.b1{
+			  cursor: pointer;
+			  width: 70px;
+			  position: absolute;
+			  right: 172px;
+			}
+			.ss{
+				display: inline-block;
+				padding-left: 90px;
+				font-weight: 600;
+				color: lightcoral;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="p-click">
+			一号车市年会名单
+		</p>
+		    <sapn class="ss">以下是座位名单</sapn>
+		    <button class="b1" id="bt">生成座位</button>
+		    <button id="btn" class="b2">重置座位</button>
+		<p id="person">
+			
+		</p>
+		<div id="">
+			
+		
+		
+		<p><span class="s">第一桌</span><span id="s1"></span></p>
+		<p><span class="s">第二桌</span><span id="s2"></span></p>
+		<p><span id="" class="s">第三桌</span><span id="s3"></span></p>
+		<p><span id=""  class="s">第四桌</span><span id="s4"></span></p>
+		<p><span id="" class="s">第五桌</span><span id="s5"></span></p>
+		<p><span id="" class="s">第六桌</span><span id="s6"></span></p>
+		<p><span id="" class="s">第七桌</span><span id="s7"></span></p>
+		<p><span id="" class="s">第八桌</span><span id="s8"></span></p>
+		<p><span id="" class="s">第九桌</span><span id="s9"></span></p>
+	
+		
+		 
+		  
+		
+	</body>
+</html>
+<script type="text/javascript">
+
+    document.getElementById("bt").onclick = function  () {
+    	
+	var arr = [] ;
+	var brr = [
+	"吴楠" ,"张砚耕" ,"姜一", "宋维玮", "滕津", "庄英俊", "程永明", "苏发清" ,"田露", "司乃捷", "武立刚", "徐晓光" ,"黄文江" ,"邵巍", "倪晓颖", "高晓瑞", "唐安",
+	
+"王路", "江思跃", "张龙", "魏建勇", "梁洪洋", "谷少良" ,"李亚" ,"贾浩南", "赵志辉", "吕慧敏", "朱元玺", "孙重阳" ,"吕智鹏" ,"邓明佳", "王耀栋",
+"蔡胜波", "张京顺" ,"宁甲冠" ,"李志兴" ,"高燕玲", "薛树洋", "杜凤", "赵春蕾", "王鼎" ,"高建伟" ,"韩文坤" ,"何庚", "王阳", "孙凯", "赵酉" ,"王凌晨",
+"崔鹏", "杨硕" ,"王天天", "罗旭明", "王亮", "于昕跃", "雷文君", "陈亮亮", "邓宏", "刘德虎", "郑海洋", "王东旭", "黄鹤" ,"明鹊" ,"李宁" ,"郑丽敏",
+"芦美玉", "贺朋娜", "郑晓飞", "周翔宇", "穆金剑", "杨军" ,"焦卫平" 
+	
+	]
+//	var brr = ["文件" , "睡觉" ,"年纪" ];
+	for (  var i = 0 ; i< brr.length ; i++ ) {
+		arr.push( "  "+ brr[i] +"  ");
+	}
+	arr.sort( function  () {
+		return ( 0.5 - Math.random() );
+	} )
+//	document.write( arr );
+     document.getElementById("person").innerHTML = arr ;
+//   document.getElementById("person").innerHTML = brr ;
+    	
+	var a = {};
+//	var len  = arr.length ;
+	for ( var j =9 ; j>0 ; j-- ) {
+		a[j] = arr.splice( 0 , Math.ceil( arr.length/j ) ) ;
+	}
+//	console.log( a[1]) ;
+     document.getElementById("s1").innerHTML = a[1] ;
+     document.getElementById("s2").innerHTML = a[2] ;
+     document.getElementById("s3").innerHTML = a[3] ;
+     document.getElementById("s4").innerHTML = a[4] ;
+     document.getElementById("s5").innerHTML = a[5] ;
+     document.getElementById("s6").innerHTML = a[6] ;
+     document.getElementById("s7").innerHTML = a[7] ;
+     document.getElementById("s8").innerHTML = a[8] ;
+     document.getElementById("s9").innerHTML = a[9] ;
+    
+     
+    }
+	document.getElementById("btn").onclick = function  () {
+		window.location.reload();
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
